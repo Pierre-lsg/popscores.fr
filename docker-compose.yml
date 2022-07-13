@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+    mysql:
+        image: mariadb
+        restart: always
+        volumes:
+            - db-data:/var/lib/mysql
+        environment: 
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+        networks:
+            - dev
+            
+    php:
+        build: ./
+        depends_on:
+            - mysql
+        volumes:
+            - ./:/app
+        ports:
+            - 8080:80
+        networks:
+            - dev
+      
+    phpmyadmin:
+        image: phpmyadmin
+        restart: always
+        depends_on:
+            - mysql
+        ports:
+            - 8081:80
+        environment: 
+            PMA_HOST: mysql
+        networks: 
+            - dev
+networks: 
+    dev:
+
+volumes: 
+    db-data:
