@@ -155,7 +155,7 @@
 						// location.reload();
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/valideScoreJoueurTrou.php", false);
+				xmlhttp.open("POST", "//site/v0/json/valideScoreJoueurTrou.php", false);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);
 			}
@@ -195,7 +195,7 @@
 			function changerTrou()
 			{
 				var l_idTrou = document.getElementById("trou").value;
-				var link = "/~popscores/site/v0/saisirScores_trou.php?id_comp="+document.getElementById("idComp").value+"&numTrou="+l_idTrou;
+				var link = "//site/v0/saisirScores_trou.php?id_comp="+document.getElementById("idComp").value+"&numTrou="+l_idTrou;
 				
 				
 				open(link,"_self");

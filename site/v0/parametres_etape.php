@@ -109,7 +109,7 @@
 						// enregistrement mis à jour
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/enregParametres.php", true);
+				xmlhttp.open("POST", "//site/v0/json/enregParametres.php", true);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);				
 			}

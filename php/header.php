@@ -1,6 +1,6 @@
 <?php
 /* Variables communes */
-$l_racineSite =  "/~popscores";
+$l_racineSite =  "/";
 ?>
 <head>
 	<!-- Matomo -->

@@ -94,7 +94,7 @@
 						// Liste des joueurs de l'équipe
 						// Si nouvelle équipe
 						if ($l_numEquipe <> $listeFly['id_equipe'])
-						{	echo '<tr class="joueur" idJoueur="'.$listeFly['idJoueur'].'"><td rowspan="'.$l_nbJouParEqp.'">' . $listeFly['eqp_nom'] . '<br><img src="/~popscores/img/clubs/' . $listeFly['logo'] . '"></td>'; 
+						{	echo '<tr class="joueur" idJoueur="'.$listeFly['idJoueur'].'"><td rowspan="'.$l_nbJouParEqp.'">' . $listeFly['eqp_nom'] . '<br><img src="//img/clubs/' . $listeFly['logo'] . '"></td>'; 
 							$l_numEquipe = $listeFly['id_equipe'];
 						}
 						else
@@ -160,7 +160,7 @@
 						// location.reload();
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/valideScoreJoueur.php", false);
+				xmlhttp.open("POST", "//site/v0/json/valideScoreJoueur.php", false);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);
 			}
@@ -205,7 +205,7 @@
 			function changerFly()
 			{
 				var l_idFly = document.getElementById("fly").value;
-				var link = "/~popscores/site/v0/saisirScores_fly.php?id_comp="+document.getElementById("idComp").value+"&numFly="+l_idFly;
+				var link = "//site/v0/saisirScores_fly.php?id_comp="+document.getElementById("idComp").value+"&numFly="+l_idFly;
 				
 				
 				open(link,"_self");

@@ -22,34 +22,34 @@
 				?>
 				<center>
 				<div>
-					<a class="ps-lien-pop" style="width:50%" href="/~popscores/site/v0/joueur.php?id_comp=<?php echo $_GET['id_comp']; ?>">
+					<a class="ps-lien-pop" style="width:50%" href="//site/v0/joueur.php?id_comp=<?php echo $_GET['id_comp']; ?>">
 						<span style="font-family: Calibri;">Créer des joueurs</span>
 					</a> 	
 				</div>				
 				<div>
-					<a class="ps-lien-pop" style="width:50%" href="/~popscores/site/v0/equipe.php?id_comp=<?php echo $_GET['id_comp']; ?>">
+					<a class="ps-lien-pop" style="width:50%" href="//site/v0/equipe.php?id_comp=<?php echo $_GET['id_comp']; ?>">
 						<span style="font-family: Calibri;">Créer des équipes</span>
 					</a> 	
 				</div>				
 				<div>
-					<a class="ps-lien-pop" style="width:50%" href="/~popscores/site/v0/club.php?id_comp=<?php echo $_GET['id_comp']; ?>">
+					<a class="ps-lien-pop" style="width:50%" href="//site/v0/club.php?id_comp=<?php echo $_GET['id_comp']; ?>">
 						<span style="font-family: Calibri;">Créer des clubs</span>
 					</a> 	
 				</div>				
 				<hr class="ps-color">
 				<div>
-					<a class="ps-lien-pop" style="width:50%" href="/~popscores/site/v0/joueur_gestion.php?id_comp=<?php echo $_GET['id_comp']; ?>">
+					<a class="ps-lien-pop" style="width:50%" href="//site/v0/joueur_gestion.php?id_comp=<?php echo $_GET['id_comp']; ?>">
 						<span style="font-family: Calibri;">Gestion des joueurs</span>
 					</a> 	
 				</div>				
 				<div>
-					<a class="ps-lien-pop" style="width:50%" href="/~popscores/site/v0/club_gestion.php?id_comp=<?php echo $_GET['id_comp']; ?>">
+					<a class="ps-lien-pop" style="width:50%" href="//site/v0/club_gestion.php?id_comp=<?php echo $_GET['id_comp']; ?>">
 						<span style="font-family: Calibri;">Gestion des clubs</span>
 					</a> 	
 				</div>				
 				<hr class="ps-color">
 				<div>
-					<a class="ps-lien-pop" style="width:50%" href="/~popscores/site/v0/joueurs.php?id_comp=<?php echo $_GET['id_comp']; ?>">
+					<a class="ps-lien-pop" style="width:50%" href="//site/v0/joueurs.php?id_comp=<?php echo $_GET['id_comp']; ?>">
 						<span style="font-family: Calibri;">Retour</span>
 					</a> 	
 				</div>				

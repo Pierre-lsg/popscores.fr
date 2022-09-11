@@ -268,7 +268,7 @@
 						// location.reload();
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/arb_v0/json/valideScoreJoueurTrou.php", false);
+				xmlhttp.open("POST", "//site/arb_v0/json/valideScoreJoueurTrou.php", false);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);
 			}
@@ -309,7 +309,7 @@
 			{
 				var l_idTrou = document.getElementById("trou").value;
 				var l_idFly = document.getElementById("fly").value;
-				var link = "/~popscores/site/arb_v0/saisirScoresArbitre_trou.php?id_comp="+document.getElementById("idComp").value+"&numTrou="+l_idTrou+"&numFly="+l_idFly;
+				var link = "//site/arb_v0/saisirScoresArbitre_trou.php?id_comp="+document.getElementById("idComp").value+"&numTrou="+l_idTrou+"&numFly="+l_idFly;
 				
 				
 				open(link,"_self");
@@ -319,7 +319,7 @@
 			{
 				var l_idTrou = document.getElementById("trou").value;
 				var l_idFly = document.getElementById("fly").value;
-				var link = "/~popscores/site/arb_v0/saisirScoresArbitre_trou.php?id_comp="+document.getElementById("idComp").value+"&numTrou="+l_idTrou+"&numFly="+l_idFly;
+				var link = "//site/arb_v0/saisirScoresArbitre_trou.php?id_comp="+document.getElementById("idComp").value+"&numTrou="+l_idTrou+"&numFly="+l_idFly;
 				
 				
 				open(link,"_self");

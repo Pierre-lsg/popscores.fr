@@ -62,7 +62,7 @@
 				
 				<p id="resultat">--</p>
 				<div>
-					<a class="ps-mini-lien-pop ps-color_sec" href="/~popscores/site/v0/jec_gestion.php?id_comp=<?php echo $_GET['id_comp'] ?>">
+					<a class="ps-mini-lien-pop ps-color_sec" href="//site/v0/jec_gestion.php?id_comp=<?php echo $_GET['id_comp'] ?>">
 						<span style="font-family: Calibri;">Retour</span>
 					</a> 	
 				</div>				
@@ -122,7 +122,7 @@
 						document.getElementById("valider").disabled = true;
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/creeJoueur.php", true);
+				xmlhttp.open("POST", "//site/v0/json/creeJoueur.php", true);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);				
 			}

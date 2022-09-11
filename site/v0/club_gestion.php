@@ -81,7 +81,7 @@
 				
 				<p id="resultat">--</p>
 				<div>
-					<a class="ps-mini-lien-pop ps-color_sec" href="/~popscores/site/v0/jec_gestion.php?id_comp=<?php echo $_GET['id_comp'] ?>">
+					<a class="ps-mini-lien-pop ps-color_sec" href="//site/v0/jec_gestion.php?id_comp=<?php echo $_GET['id_comp'] ?>">
 						<span style="font-family: Calibri;">Retour</span>
 					</a> 	
 				</div>				
@@ -105,7 +105,7 @@
 						document.getElementById("resultat").innerHTML = "Equipe modifiée ...";
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/modifieNomEquipe.php", true);
+				xmlhttp.open("POST", "//site/v0/json/modifieNomEquipe.php", true);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);			
 			}
@@ -124,7 +124,7 @@
 						document.getElementById("resultat").innerHTML = "Equipe modifiée ...";
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/modifieCalculEquipe.php", true);
+				xmlhttp.open("POST", "//site/v0/json/modifieCalculEquipe.php", true);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);
 			}
@@ -132,7 +132,7 @@
 			function changerEquipe()
 			{
 				var l_idClub = document.getElementById("club").value;
-				var link = "/~popscores/site/v0/club_gestion.php?id_comp="+document.getElementById("idComp").value+"&idClub="+l_idClub;
+				var link = "//site/v0/club_gestion.php?id_comp="+document.getElementById("idComp").value+"&idClub="+l_idClub;
 				
 				open(link,"_self");
 			}

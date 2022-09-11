@@ -207,7 +207,7 @@
 						document.getElementById("resultat").innerHTML = "OK";
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/modifiePrenomJoueur.php", true);
+				xmlhttp.open("POST", "//site/v0/json/modifiePrenomJoueur.php", true);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);
 			}
@@ -259,7 +259,7 @@
 						document.getElementById("resultat").innerHTML = "OK";
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/modifieNomJoueur.php", true);
+				xmlhttp.open("POST", "//site/v0/json/modifieNomJoueur.php", true);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);
 			}
@@ -338,7 +338,7 @@
 						document.getElementById("resultat").innerHTML = "Changement de l'équipe " + l_idJoueur + " " + l_nomEquipe;
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/modifieEquipeJoueur.php", true);
+				xmlhttp.open("POST", "//site/v0/json/modifieEquipeJoueur.php", true);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);
 			}
@@ -347,7 +347,7 @@
 			function nouveauJEC()
 			{
 				// renvoi vers la page "Nouveau Joueur"
-				var link = "/~popscores/site/v0/jec_gestion.php?id_comp="+document.getElementById("idComp").value;
+				var link = "//site/v0/jec_gestion.php?id_comp="+document.getElementById("idComp").value;
 				open(link,"_self");
 			}
 			
@@ -355,7 +355,7 @@
 			function nouvelleEquipe()
 			{
 				// renvoi vers la page "Nouvelle équipe"
-				var link = "/~popscores/site/v0/equipe.php?id_comp="+document.getElementById("idComp").value;
+				var link = "//site/v0/equipe.php?id_comp="+document.getElementById("idComp").value;
 				open(link,"_self");
 			}
 		
@@ -513,7 +513,7 @@
 							location.reload();
 						}
 					};
-					xmlhttp.open("POST", "/~popscores/site/v0/json/enregJoueurCompet.php", true);
+					xmlhttp.open("POST", "//site/v0/json/enregJoueurCompet.php", true);
 					xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 					xmlhttp.send("x=" + dbParam);
 				}

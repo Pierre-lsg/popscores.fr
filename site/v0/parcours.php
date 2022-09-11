@@ -137,7 +137,7 @@
 						location.reload();
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/recalculParcours.php", true);
+				xmlhttp.open("POST", "//site/v0/json/recalculParcours.php", true);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);				
 			}
@@ -173,7 +173,7 @@
 						// enregistrement mis à jour
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/enregParcoursV0.php", true);
+				xmlhttp.open("POST", "//site/v0/json/enregParcoursV0.php", true);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);				
 			}

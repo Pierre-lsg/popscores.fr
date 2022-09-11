@@ -14,7 +14,7 @@
 			session_destroy(); 
 		?>
 		<script>
-			var link = "/~popscores/index.php";
+			var link = "//index.php";
 			open(link,"_self");
 		</script>
 	</body>

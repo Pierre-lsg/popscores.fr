@@ -52,7 +52,7 @@
 			
 			function accesComp(comp)
 			{
-				var link = "/~popscores/site/v0/etape.php?id_comp="+comp.id;
+				var link = "//site/v0/etape.php?id_comp="+comp.id;
 				open(link,"_self")
 			}
 

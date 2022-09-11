@@ -102,7 +102,7 @@
 						// Liste des joueurs de l'équipe
 						// Si nouvelle équipe
 						if ($l_numEquipe <> $listeFly['id_equipe'])
-						{	echo '<tr><td rowspan="'.$l_nbJouParEqp.'">' . $listeFly['eqp_nom'] . '<br><img src="/~popscores/img/clubs/' . $listeFly['logo'] . '"></td>'; 
+						{	echo '<tr><td rowspan="'.$l_nbJouParEqp.'">' . $listeFly['eqp_nom'] . '<br><img src="//img/clubs/' . $listeFly['logo'] . '"></td>'; 
 							$l_numEquipe = $listeFly['id_equipe'];
 						}
 						else
@@ -150,7 +150,7 @@
 						location.reload();
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/permutationFly.php", true);
+				xmlhttp.open("POST", "//site/v0/json/permutationFly.php", true);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);
 			}

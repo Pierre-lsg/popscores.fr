@@ -89,7 +89,7 @@
 						// Liste des joueurs de l'équipe
 						// Si nouvelle équipe
 						if ($l_numEquipe <> $listeFly['id_equipe'])
-						{	echo '<tr><td rowspan="'.$l_nbJouParEqp.'">' . $listeFly['eqp_nom'] . '<br><img src="/~popscores/img/clubs/' . $listeFly['logo'] . '"></td>'; 
+						{	echo '<tr><td rowspan="'.$l_nbJouParEqp.'">' . $listeFly['eqp_nom'] . '<br><img src="//img/clubs/' . $listeFly['logo'] . '"></td>'; 
 							$l_numEquipe = $listeFly['id_equipe'];
 						}
 						else
@@ -135,7 +135,7 @@
 						location.reload();
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/calculFly.php", true);
+				xmlhttp.open("POST", "//site/v0/json/calculFly.php", true);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);
 			}
@@ -159,26 +159,26 @@
 						location.reload();
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/suppressionFly.php", true);
+				xmlhttp.open("POST", "//site/v0/json/suppressionFly.php", true);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);
 			}
 			
 			function permuterFly()
 			{
-				var link = "/~popscores/site/v0/permuter.php?id_comp="+document.getElementById("idComp").value;
+				var link = "//site/v0/permuter.php?id_comp="+document.getElementById("idComp").value;
 				open(link,"_self")
 			}
 			
 			function imprimerFly()
 			{
-				var link = "/~popscores/site/v0/imprimerFly.php?id_comp="+document.getElementById("idComp").value;
+				var link = "//site/v0/imprimerFly.php?id_comp="+document.getElementById("idComp").value;
 				open(link,"_blank")
 			}
 
 			function imprimerTrou()
 			{
-				var link = "/~popscores/site/v0/imprimerTrou.php?id_comp="+document.getElementById("idComp").value;
+				var link = "//site/v0/imprimerTrou.php?id_comp="+document.getElementById("idComp").value;
 				open(link,"_blank")
 			}
 

@@ -85,7 +85,7 @@
 
 				<!-- Afficher la liste -->
 				<br><br>
-				<form action="/~popscores/resultats.php">
+				<form action="//resultats.php">
 					<table class="w3-table">
 						<tr>
 							<td width="50px">Championnat</td>
@@ -225,7 +225,7 @@
 										if ($donnees['estCalculChampionnat'] == 1) { $ptsEquipeChampionnat = $donnees['scoreChamp']; }
 										else { $ptsEquipeChampionnat = ""; }										
 										
-										echo '<tr class="' . $classeLigne . '"><td>' . $classement . '  - <img src="/~popscores/img/clubs/' . $donnees['logo'] . '"></td><td>' . $donnees['nom'];
+										echo '<tr class="' . $classeLigne . '"><td>' . $classement . '  - <img src="//img/clubs/' . $donnees['logo'] . '"></td><td>' . $donnees['nom'];
 							
 										$sql2='SELECT j.prenom FROM joueur j, joueur_comp jc, equipe e WHERE jc.id_comp = ' . $l_idComp . ' AND e.id_equipe = ' . $donnees['id_equipe'] . ' AND jc.id_joueur = j.id_joueur AND jc.id_equipe = e.id_equipe';
 										$req2 = $bdd->query($sql2);
@@ -336,7 +336,7 @@
 												if ($numligne % 2 == 0) { $classeLigne = 'w3-light-gray'; }
 												else { $classeLigne = ''; } 
 												
-												echo '<tr class="' . $classeLigne . '"><td>' . $classement . '  - <img src="/~popscores/img/clubs/' . $donnees['logo'] . '"></td><td>' . $donnees['nom'] . '</td><td>' . $donnees['score'] . '</td></tr>';
+												echo '<tr class="' . $classeLigne . '"><td>' . $classement . '  - <img src="//img/clubs/' . $donnees['logo'] . '"></td><td>' . $donnees['nom'] . '</td><td>' . $donnees['score'] . '</td></tr>';
 												
 												$nbScorePrec = $donnees['score'];
 											}
@@ -364,7 +364,7 @@
 		{
 			l_idComp = document.getElementById("id_comp").options[document.getElementById("id_comp").selectedIndex].value;
 
-			var link = "/~popscores/resultats/carteScore.php?id_comp=" + l_idComp + "&id_joueur=" + i_idJoueur;
+			var link = "//resultats/carteScore.php?id_comp=" + l_idComp + "&id_joueur=" + i_idJoueur;
 			
 			open(link,"_self");
 		}
@@ -385,7 +385,7 @@
 			l_idChamp = document.getElementById("id_champ").options[document.getElementById("id_champ").selectedIndex].value;
 			l_idComp = document.getElementById("id_comp").options[document.getElementById("id_comp").selectedIndex].value;
 
-			var link = "/~popscores/resultats.php?id_comp="+l_idComp+"&id_champ="+l_idChamp;
+			var link = "//resultats.php?id_comp="+l_idComp+"&id_champ="+l_idChamp;
 			
 			open(link,"_self");
 		}
@@ -396,7 +396,7 @@
 			l_idChamp = document.getElementById("id_champ").options[document.getElementById("id_champ").selectedIndex].value;
 			l_idComp = document.getElementById("id_comp").options[document.getElementById("id_comp").selectedIndex].value;
 
-			var link = "/~popscores/resultats.php?id_champ="+l_idChamp;
+			var link = "//resultats.php?id_champ="+l_idChamp;
 			
 			open(link,"_self");
 		}

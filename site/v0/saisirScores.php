@@ -26,13 +26,13 @@
 				?>
 				<center>
 					<div>
-						<a class="ps-lien-pop" style="width:50%" href="/~popscores/site/v0/saisirScores_fly.php?id_comp=<?php echo $_GET['id_comp']?>">
+						<a class="ps-lien-pop" style="width:50%" href="//site/v0/saisirScores_fly.php?id_comp=<?php echo $_GET['id_comp']?>">
 							<span style="font-family: Calibri;">Saisie par Fly</span>
 						</a> 	
-						<a class="ps-lien-pop" style="width:50%" href="/~popscores/site/v0/saisirScores_trou.php?id_comp=<?php echo $_GET['id_comp']?>">
+						<a class="ps-lien-pop" style="width:50%" href="//site/v0/saisirScores_trou.php?id_comp=<?php echo $_GET['id_comp']?>">
 							<span style="font-family: Calibri;">Saisie par Trou</span>
 						</a> 	
-						<a class="ps-lien-pop" style="width:50%" href="/~popscores/site/v0/export/csv_resultatCompetition.php?id_comp=<?php echo $_GET['id_comp']?>">
+						<a class="ps-lien-pop" style="width:50%" href="//site/v0/export/csv_resultatCompetition.php?id_comp=<?php echo $_GET['id_comp']?>">
 							<span style="font-family: Calibri;">Export CSV</span>
 						</a> 	
 					</div>

@@ -37,7 +37,7 @@
 				<button onClick="calculClassement();" type="submit" class="w3-button w3-block w3-padding-large ps-color w3-margin-bottom">Calculer le classement</button>
 
 				<!-- Tableaux de classement  de la compétition -->
-				<h2 class="w3-xxlarge ps-text-color"><b>Résultats de la compétition :</b> <a href='export/csv_resultatCompetition.php?id_comp=<?php echo $_GET["id_comp"]; ?>'><img src="/~popscores/img/expcsv.jpg" alt="Export CSV"style="width:32px;height:32px;"></a></h2>
+				<h2 class="w3-xxlarge ps-text-color"><b>Résultats de la compétition :</b> <a href='export/csv_resultatCompetition.php?id_comp=<?php echo $_GET["id_comp"]; ?>'><img src="//img/expcsv.jpg" alt="Export CSV"style="width:32px;height:32px;"></a></h2>
 				<h2 class="w3-xxlarge ps-text-color"><b>Classement de la compétition</b></h2>
 
 				<table class="w3-table">
@@ -45,7 +45,7 @@
 						<td>
 							<table class="w3-table" id="classementJoueur">
 								<tr>
-									<th><a href='export/csv_classementJoueur.php?id_comp=<?php echo $_GET["id_comp"]; ?>'><img src="/~popscores/img/expcsv.jpg" alt="Export CSV"style="width:32px;height:32px;"></a></th>
+									<th><a href='export/csv_classementJoueur.php?id_comp=<?php echo $_GET["id_comp"]; ?>'><img src="//img/expcsv.jpg" alt="Export CSV"style="width:32px;height:32px;"></a></th>
 									<th></th>
 									<th></th>
 								</tr>
@@ -87,7 +87,7 @@
 						<td>
 							<table class="w3-table" id="classementEquipe">
 								<tr>
-									<th><a href='export/csv_classementEquipe.php?id_comp=<?php echo $_GET["id_comp"]; ?>'><img src="/~popscores/img/expcsv.jpg" alt="Export CSV"style="width:32px;height:32px;"></a></th>
+									<th><a href='export/csv_classementEquipe.php?id_comp=<?php echo $_GET["id_comp"]; ?>'><img src="//img/expcsv.jpg" alt="Export CSV"style="width:32px;height:32px;"></a></th>
 									<th></th>
 									<th></th>
 								</tr>
@@ -117,7 +117,7 @@
 											if ($numligne % 2 == 0) { $classeLigne = 'w3-light-gray'; }
 											else { $classeLigne = ''; } 
 											
-											echo '<tr class="' . $classeLigne . '"><td>' . $classement . '  - <img src="/~popscores/img/clubs/' . $donnees['logo'] . '"></td><td>' . $donnees['nom'] . '</td><td>' . $donnees['score'] . '</td><td>' . $donnees['resultat'] . '</td></tr>';
+											echo '<tr class="' . $classeLigne . '"><td>' . $classement . '  - <img src="//img/clubs/' . $donnees['logo'] . '"></td><td>' . $donnees['nom'] . '</td><td>' . $donnees['score'] . '</td><td>' . $donnees['resultat'] . '</td></tr>';
 											
 											$nbScorePrec = $donnees['score'];
 										}
@@ -137,7 +137,7 @@
 						<td>
 							<table class="w3-table" id="classementGeneralJoueur">
 								<tr>
-									<th><a href='export/csv_classementGeneralJoueur.php?id_champ=<?php echo $l_idChamp; ?>'><img src="/~popscores/img/expcsv.jpg" alt="Export CSV"style="width:32px;height:32px;"></a></th>
+									<th><a href='export/csv_classementGeneralJoueur.php?id_champ=<?php echo $l_idChamp; ?>'><img src="//img/expcsv.jpg" alt="Export CSV"style="width:32px;height:32px;"></a></th>
 									<th></th>
 									<th></th>
 								</tr>
@@ -178,7 +178,7 @@
 						<td>
 							<table class="w3-table" id="classementGeneralClub">
 								<tr>
-									<th><a href='export/csv_classementGeneralClub.php?id_champ=<?php echo $l_idChamp; ?>'><img src="/~popscores/img/expcsv.jpg" alt="Export CSV"style="width:32px;height:32px;"></a></th>
+									<th><a href='export/csv_classementGeneralClub.php?id_champ=<?php echo $l_idChamp; ?>'><img src="//img/expcsv.jpg" alt="Export CSV"style="width:32px;height:32px;"></a></th>
 									<th></th>
 									<th></th>
 								</tr>
@@ -207,7 +207,7 @@
 											if ($numligne % 2 == 0) { $classeLigne = 'w3-light-gray'; }
 											else { $classeLigne = ''; } 
 											
-											echo '<tr class="' . $classeLigne . '"><td>' . $classement . '  - <img src="/~popscores/img/clubs/' . $donnees['logo'] . '"></td><td>' . $donnees['nom'] . '</td><td>' . $donnees['score'] . '</td></tr>';
+											echo '<tr class="' . $classeLigne . '"><td>' . $classement . '  - <img src="//img/clubs/' . $donnees['logo'] . '"></td><td>' . $donnees['nom'] . '</td><td>' . $donnees['score'] . '</td></tr>';
 											
 											$nbScorePrec = $donnees['score'];
 										}
@@ -259,7 +259,7 @@
 						
 					}
 				};
-				xmlhttp.open("POST", "/~popscores/site/v0/json/calculeClassement"+ typeClassement +".php", false);
+				xmlhttp.open("POST", "//site/v0/json/calculeClassement"+ typeClassement +".php", false);
 				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xmlhttp.send("x=" + dbParam);			
 			}
@@ -296,13 +296,13 @@
 						cell = ligne.insertCell(0);
 						cell.innerHTML = l_classement;
 						if (i_typeClass == "Equipe" || i_typeClass == "GeneralClub")
-						{	cell.innerHTML = cell.innerHTML + "  - <img src='/~popscores/img/clubs/" + obj[x].logo + "'>"; }
+						{	cell.innerHTML = cell.innerHTML + "  - <img src='//img/clubs/" + obj[x].logo + "'>"; }
 					}
 					else 
 					{
 						cell = ligne.insertCell(0);
 						if (i_typeClass == "Equipe" || i_typeClass == "GeneralClub")
-						{	cell.innerHTML = "<img src='/~popscores/img/clubs/" + obj[x].logo + "'>"; }
+						{	cell.innerHTML = "<img src='//img/clubs/" + obj[x].logo + "'>"; }
 					}
 					
 					cell = ligne.insertCell(1);
