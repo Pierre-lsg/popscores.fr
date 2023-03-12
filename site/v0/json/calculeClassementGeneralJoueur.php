@@ -17,16 +17,19 @@ $reqSupp = $bdd->query($sqlSupp);
 $reqSupp->closeCursor();
 
 // Paramètres du championnat
+// Nombre de compétition prises en compte dans le calcul ; Règles FFSG 2023
 $l_nbCompCalcul = 0;
-$sqlPar = 'SELECT `nbCompCalcul` FROM `championnat` WHERE id_champ = ' . $obj->idChamp . ' ;';
+$l_rglFssg2023 = false;
+$sqlPar = 'SELECT `nbCompCalcul`, `FFSG2023` FROM `championnat` WHERE id_champ = ' . $obj->idChamp . ' ;';
 $reqPar = $bdd->query($sqlPar);
 if ($reqPar->rowCount() <> 0)
 { 
 	$res = $reqPar->fetch(); 
-	$l_nbCompCalcul = $res['nbCompCalcul']; 
+	$l_nbCompCalcul = $res['nbCompCalcul'];
+	if ($res['FFSG2023'] <> 0) { $l_rglFssg2023 = true; }
 }
 $reqPar->closeCursor();
-if ($l_nbCompCalcul == 0) { $l_nbCompCalcul = 999; }
+if ($l_nbCompCalcul == 0) { $l_nbCompCalcul = 999; } 
 
 // Pour chaque joueur du classement, calcul du nombre de points
 // Création de l'enregistrement 'classement_champ'
@@ -34,7 +37,9 @@ $nbComp       = 0;
 $nbPointsJ    = 0;
 $l_idJoueur   = 0;
 
-$sql='SELECT j.id_joueur, CONCAT(j.prenom, " " ,j.nom) AS joueur, ccc.scoreChamp AS points FROM championnat c, competition cc, classement_comp ccc, joueur j WHERE c.id_champ = '. $obj->idChamp .' AND c.id_champ = cc.id_champ AND cc.pourChampionnat <> 0 AND ccc.id_catClass = 1 AND ccc.id_comp = cc.id_comp AND j.id_joueur = ccc.id_cat AND j.estCalculChampionnat <> 0 ORDER BY j.id_joueur, points DESC';
+if ($l_rglFssg2023 == true)
+{	$sql='SELECT j.id_joueur, CONCAT(j.prenom, " " ,j.nom) AS joueur, ccc.scoreChamp AS points FROM championnat c, competition cc, classement_comp ccc, joueur j WHERE c.id_champ = '. $obj->idChamp .' AND c.id_champ = cc.id_champ AND cc.pourChampionnat <> 0 AND ccc.id_catClass = 1 AND ccc.id_comp = cc.id_comp AND j.id_joueur = ccc.id_cat AND j.estCalculChampionnat <> 0 ORDER BY j.id_joueur, points DESC'; }
+else {	$sql='SELECT j.id_joueur, CONCAT(j.prenom, " " ,j.nom) AS joueur, ccc.scoreChamp AS points FROM championnat c, competition cc, classement_comp ccc, joueur j WHERE c.id_champ = '. $obj->idChamp .' AND c.id_champ = cc.id_champ AND cc.pourChampionnat <> 0 AND cc.individuel <> 0 AND ccc.id_catClass = 1 AND ccc.id_comp = cc.id_comp AND j.id_joueur = ccc.id_cat AND j.estCalculChampionnat <> 0 ORDER BY j.id_joueur, points DESC'; }
 $req = $bdd->query($sql);
 if ($req->rowCount() <> 0)
 {
